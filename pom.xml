@@ -50,7 +50,7 @@
     </build>
 
     <properties>
-      <version.xnio>3.1.0.Beta5</version.xnio>
+      <version.xnio>3.1.0.Beta6</version.xnio>
       <version.undertow>1.0.0.Alpha1-SNAPSHOT</version.undertow>
       <version.javax.servlet-3.0>1.0.2.Final</version.javax.servlet-3.0>
       <version.jboss-logging>3.1.2.GA</version.jboss-logging>

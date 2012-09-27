@@ -86,8 +86,8 @@ public class ServerMain {
         server.resumeAccepts();
 
         final PathHandler root = new PathHandler();
-        final ServletContainer container = ServletContainer.Factory.newInstance(root);
-        
+        final ServletContainer container = ServletContainer.Factory.newInstance();
+
         ServletInfo s = new ServletInfo("SimpleServlet", SimpleServlet.class)
         		.addMapping("/SimpleServlet");
 
@@ -102,11 +102,11 @@ public class ServerMain {
         DeploymentManager manager = container.addDeployment(builder);
         manager.deploy();
         try {
-			manager.start();
+        	root.addPath(builder.getContextPath(), manager.start());
 		} catch (ServletException e) {
 			System.out.println("failed: " + e);
 		}
-
+        
         final HttpTransferEncodingHandler ph = new HttpTransferEncodingHandler();
         ph.setNext(root);
         openListener.setRootHandler(ph);
