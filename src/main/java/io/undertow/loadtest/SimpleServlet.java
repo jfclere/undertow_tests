@@ -1,4 +1,4 @@
-package org.jboss.web.loadtest;
+package io.undertow.loadtest;
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -50,6 +50,7 @@
     </build>
 
     <properties>
+      <version.xnio>3.1.0.Beta5</version.xnio>
       <version.undertow>1.0.0.Alpha1-SNAPSHOT</version.undertow>
       <version.javax.servlet-3.0>1.0.2.Final</version.javax.servlet-3.0>
       <version.jboss-logging>3.1.2.GA</version.jboss-logging>
@@ -72,10 +73,30 @@
             <artifactId>undertow-core</artifactId>
             <version>${version.undertow}</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.undertow</groupId>
+            <artifactId>undertow-servlet</artifactId>
+            <version>${version.undertow}</version>
+        </dependency>
+
         <dependency>
              <groupId>org.jboss.logmanager</groupId>
              <artifactId>jboss-logmanager</artifactId>
              <version>${version.org.jboss.logmanager.jboss-logmanager}</version>
         </dependency>
+
+        <dependency>
+            <groupId>org.jboss.xnio</groupId>
+            <artifactId>xnio-api</artifactId>
+            <version>${version.xnio}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jboss.xnio</groupId>
+            <artifactId>xnio-nio</artifactId>
+            <version>${version.xnio}</version>
+        </dependency>
+
     </dependencies>
 </project>
