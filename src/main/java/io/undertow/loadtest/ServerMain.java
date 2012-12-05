@@ -98,6 +98,8 @@ public class ServerMain {
                 .setDeploymentName("SimpleServlet.war")
                 .setResourceLoader(NOOP_RESOURCE_LOADER)
                 .addServlet(s);
+        
+        builder.setExecutorFactory(executorFactory);
    
         DeploymentManager manager = container.addDeployment(builder);
         manager.deploy();
