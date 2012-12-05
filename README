@@ -1,0 +1,4 @@
+to test:
+http://localhost:8080/SimpleServlet/SimpleServlet
+Should say:
+"Hello World"
